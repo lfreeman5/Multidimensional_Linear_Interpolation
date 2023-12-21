@@ -19,7 +19,8 @@ def k(v):
 
 #Demo: interpolate 2 functions with 2 dependent variables
 filename = 'test3D.txt'
-#Because random is used here, the test vector data can fall outside the generated data range. Run again if this happens
+#Because the random option is used in generating data, the data will be non-uniform
+#As a result, the test vector can fall outside the generated data range. Run again if this happens
 generate_data.genData([f,g],[100,100],[[-5,5],[-5,5]], filename=filename, random=True)
 data = dataset.Dataset()
 data.init_from_file(filename, dependent_variables=2)
